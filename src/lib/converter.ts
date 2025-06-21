@@ -2,6 +2,11 @@
 // This script converts Unicode Devanagari text to legacy APS-DV-Prakash font encoding.
 // The conversion logic is based on standard Unicode-to-legacy font mapping patterns.
 
+function escapeRegExp(string: string): string {
+  // $& means the whole matched string
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 export function convertUnicodeToAps(text: string): string {
   let modified_substring = text;
 
@@ -34,7 +39,7 @@ export function convertUnicodeToAps(text: string): string {
   ];
 
   for (let i = 0; i < array_one.length; i++) {
-    const regex = new RegExp(array_one[i], 'g');
+    const regex = new RegExp(escapeRegExp(array_one[i]), 'g');
     modified_substring = modified_substring.replace(regex, array_two[i]);
   }
 
