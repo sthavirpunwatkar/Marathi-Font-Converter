@@ -13,6 +13,7 @@ export default {
         body: ['Inter', 'sans-serif'],
         headline: ['Inter', 'sans-serif'],
         code: ['monospace'],
+        aps: ['APS-DV-Prakash', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -88,10 +89,15 @@ export default {
             height: '0',
           },
         },
+        'spin-slow': {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '50%': { transform: 'rotate(360deg)' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'spin-slow': 'spin-slow 2s ease-in-out infinite',
       },
     },
   },
