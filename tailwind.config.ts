@@ -14,6 +14,8 @@ export default {
         headline: ['Inter', 'sans-serif'],
         code: ['monospace'],
         aps: ['APS-DV-Prakash', 'sans-serif'],
+        devanagari: ['Noto Sans Devanagari', 'sans-serif'],
+        marathi: ['Noto Sans Devanagari', 'Inter', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -66,6 +68,23 @@ export default {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
         },
+        // Indian Ancient Theme Colors
+        indian: {
+          gold: 'var(--indian-gold)',
+          red: 'var(--indian-red)',
+          orange: 'var(--indian-orange)',
+          yellow: 'var(--indian-yellow)',
+          green: 'var(--indian-green)',
+          blue: 'var(--indian-blue)',
+          purple: 'var(--indian-purple)',
+          brown: 'var(--indian-brown)',
+          dark: 'var(--indian-dark)',
+          darker: 'var(--indian-darker)',
+          light: 'var(--indian-light)',
+          bronze: 'var(--indian-bronze)',
+          copper: 'var(--indian-copper)',
+          silver: 'var(--indian-silver)',
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -92,12 +111,48 @@ export default {
         'spin-slow': {
           '0%, 100%': { transform: 'rotate(0deg)' },
           '50%': { transform: 'rotate(360deg)' },
-        }
+        },
+        'ancient-pulse': {
+          '0%, 100%': { 
+            boxShadow: '0 0 20px rgba(212, 175, 55, 0.3)',
+          },
+          '50%': { 
+            boxShadow: '0 0 30px rgba(212, 175, 55, 0.6)',
+          },
+        },
+        'ancient-spin': {
+          '0%': {
+            transform: 'rotate(0deg)',
+            borderTopColor: 'var(--indian-gold)',
+          },
+          '25%': {
+            borderTopColor: 'var(--indian-yellow)',
+          },
+          '50%': {
+            borderTopColor: 'var(--indian-orange)',
+          },
+          '75%': {
+            borderTopColor: 'var(--indian-red)',
+          },
+          '100%': {
+            transform: 'rotate(360deg)',
+            borderTopColor: 'var(--indian-gold)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'spin-slow': 'spin-slow 2s ease-in-out infinite',
+        'ancient-pulse': 'ancient-pulse 3s ease-in-out infinite',
+        'ancient-spin': 'ancient-spin 1s linear infinite',
+      },
+      backgroundImage: {
+        'ancient-pattern': 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(212, 175, 55, 0.03) 2px, rgba(212, 175, 55, 0.03) 4px)',
+        'ancient-gradient': 'linear-gradient(135deg, var(--indian-darker) 0%, var(--indian-dark) 100%)',
+        'ancient-card': 'linear-gradient(145deg, rgba(26, 15, 15, 0.95) 0%, rgba(15, 8, 8, 0.98) 100%)',
+        'ancient-button': 'linear-gradient(145deg, var(--indian-gold) 0%, var(--indian-yellow) 50%, var(--indian-gold) 100%)',
+        'ancient-title': 'linear-gradient(45deg, var(--indian-gold) 0%, var(--indian-yellow) 25%, var(--indian-orange) 50%, var(--indian-yellow) 75%, var(--indian-gold) 100%)',
       },
     },
   },

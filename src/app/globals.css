@@ -8,31 +8,31 @@ body {
 
 @layer base {
   :root {
-    --background: 208 27% 95%;
-    --foreground: 215 10% 25%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
-    --card-foreground: 215 10% 25%;
+    --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 215 10% 25%;
-    --primary: 14 36% 66%;
-    --primary-foreground: 14 36% 10%;
-    --secondary: 208 27% 90%;
-    --secondary-foreground: 215 10% 25%;
-    --muted: 208 27% 90%;
-    --muted-foreground: 215 10% 45%;
-    --accent: 203 36% 66%;
-    --accent-foreground: 203 36% 10%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 208 27% 88%;
-    --input: 208 27% 88%;
-    --ring: 203 36% 66%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -43,25 +43,25 @@ body {
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
   .dark {
-    --background: 222 47% 11%;
+    --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-    --card: 222 47% 11%;
+    --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-    --popover: 222 47% 11%;
+    --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    --primary: 14 36% 66%;
-    --primary-foreground: 14 36% 10%;
-    --secondary: 217 33% 17%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 203 36% 66%;
-    --accent-foreground: 203 36% 10%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 203 36% 66%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -85,4 +85,513 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Indian Ancient Theme Variables */
+:root {
+  --indian-gold: #D4AF37;
+  --indian-red: #CD5C5C;
+  --indian-orange: #FF8C00;
+  --indian-yellow: #FFD700;
+  --indian-green: #228B22;
+  --indian-blue: #4169E1;
+  --indian-purple: #8A2BE2;
+  --indian-brown: #8B4513;
+  --indian-dark: #1a0f0f;
+  --indian-darker: #0f0808;
+  --indian-light: #f5f5dc;
+  --indian-bronze: #CD7F32;
+  --indian-copper: #B87333;
+  --indian-silver: #C0C0C0;
+}
+
+/* 3D Indian Mythology Background */
+.ancient-bg {
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(205, 92, 92, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(34, 139, 34, 0.05) 0%, transparent 50%),
+    linear-gradient(135deg, var(--indian-darker) 0%, var(--indian-dark) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.ancient-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(212, 175, 55, 0.03) 2px,
+      rgba(212, 175, 55, 0.03) 4px
+    );
+  pointer-events: none;
+}
+
+/* 3D Floating Elements */
+.ancient-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    /* Sacred Geometry - Sri Yantra */
+    radial-gradient(circle at 10% 15%, rgba(212, 175, 55, 0.1) 0%, transparent 8%),
+    radial-gradient(circle at 90% 85%, rgba(255, 215, 0, 0.08) 0%, transparent 12%),
+    radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 20%),
+    
+    /* Floating Lotus Petals */
+    radial-gradient(ellipse at 15% 25%, rgba(255, 215, 0, 0.1) 0%, transparent 15%),
+    radial-gradient(ellipse at 85% 75%, rgba(212, 175, 55, 0.08) 0%, transparent 18%),
+    radial-gradient(ellipse at 70% 30%, rgba(255, 215, 0, 0.06) 0%, transparent 12%),
+    
+    /* Om Symbol Glow */
+    radial-gradient(circle at 30% 70%, rgba(212, 175, 55, 0.07) 0%, transparent 25%),
+    radial-gradient(circle at 70% 30%, rgba(255, 215, 0, 0.05) 0%, transparent 30%);
+  pointer-events: none;
+  animation: floatElements 20s ease-in-out infinite;
+}
+
+/* 3D Floating Animation */
+@keyframes floatElements {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.7;
+  }
+  25% {
+    transform: translateY(-10px) rotate(1deg);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(-5px) rotate(-1deg);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-15px) rotate(0.5deg);
+    opacity: 0.6;
+  }
+}
+
+/* 3D Sacred Geometry Elements */
+.mythological-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.mythological-element {
+  position: absolute;
+  opacity: 0.1;
+  animation: float3D 15s ease-in-out infinite;
+}
+
+.mythological-element:nth-child(1) {
+  top: 10%;
+  left: 5%;
+  width: 60px;
+  height: 60px;
+  background: 
+    conic-gradient(from 0deg, transparent, var(--indian-gold), transparent);
+  border-radius: 50%;
+  animation-delay: 0s;
+}
+
+.mythological-element:nth-child(2) {
+  top: 20%;
+  right: 10%;
+  width: 40px;
+  height: 40px;
+  background: 
+    linear-gradient(45deg, var(--indian-yellow), var(--indian-gold));
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  animation-delay: 2s;
+}
+
+.mythological-element:nth-child(3) {
+  bottom: 15%;
+  left: 15%;
+  width: 50px;
+  height: 50px;
+  background: 
+    radial-gradient(circle, var(--indian-gold) 0%, transparent 70%);
+  border-radius: 50%;
+  animation-delay: 4s;
+}
+
+.mythological-element:nth-child(4) {
+  bottom: 25%;
+  right: 5%;
+  width: 35px;
+  height: 35px;
+  background: 
+    linear-gradient(135deg, var(--indian-yellow), var(--indian-orange));
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  animation-delay: 6s;
+}
+
+.mythological-element:nth-child(5) {
+  top: 50%;
+  left: 2%;
+  width: 45px;
+  height: 45px;
+  background: 
+    conic-gradient(from 180deg, var(--indian-gold), transparent, var(--indian-yellow));
+  border-radius: 50%;
+  animation-delay: 8s;
+}
+
+.mythological-element:nth-child(6) {
+  top: 60%;
+  right: 8%;
+  width: 55px;
+  height: 55px;
+  background: 
+    radial-gradient(ellipse, var(--indian-yellow) 0%, transparent 60%);
+  border-radius: 50%;
+  animation-delay: 10s;
+}
+
+/* 3D Floating Animation */
+@keyframes float3D {
+  0%, 100% {
+    transform: translateY(0px) translateZ(0px) rotateY(0deg);
+    opacity: 0.1;
+  }
+  25% {
+    transform: translateY(-20px) translateZ(10px) rotateY(90deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-10px) translateZ(20px) rotateY(180deg);
+    opacity: 0.2;
+  }
+  75% {
+    transform: translateY(-30px) translateZ(15px) rotateY(270deg);
+    opacity: 0.4;
+  }
+}
+
+/* 3D Lotus Petals */
+.lotus-petal {
+  position: absolute;
+  width: 30px;
+  height: 60px;
+  background: linear-gradient(45deg, var(--indian-gold), var(--indian-yellow));
+  border-radius: 50% 50% 0 0;
+  opacity: 0.15;
+  animation: lotusFloat 12s ease-in-out infinite;
+}
+
+.lotus-petal:nth-child(1) { top: 5%; left: 20%; animation-delay: 0s; }
+.lotus-petal:nth-child(2) { top: 15%; right: 25%; animation-delay: 1s; }
+.lotus-petal:nth-child(3) { bottom: 10%; left: 30%; animation-delay: 2s; }
+.lotus-petal:nth-child(4) { bottom: 20%; right: 15%; animation-delay: 3s; }
+.lotus-petal:nth-child(5) { top: 40%; left: 8%; animation-delay: 4s; }
+.lotus-petal:nth-child(6) { top: 45%; right: 5%; animation-delay: 5s; }
+
+@keyframes lotusFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+    opacity: 0.15;
+  }
+  33% {
+    transform: translateY(-15px) rotate(120deg) scale(1.1);
+    opacity: 0.25;
+  }
+  66% {
+    transform: translateY(-25px) rotate(240deg) scale(0.9);
+    opacity: 0.2;
+  }
+}
+
+/* 3D Sacred Symbols */
+.sacred-symbol {
+  position: absolute;
+  font-size: 2rem;
+  color: var(--indian-gold);
+  opacity: 0.1;
+  animation: symbolGlow 8s ease-in-out infinite;
+  text-shadow: 0 0 10px var(--indian-gold);
+}
+
+.sacred-symbol:nth-child(1) { top: 8%; left: 50%; content: 'ॐ'; animation-delay: 0s; }
+.sacred-symbol:nth-child(2) { top: 25%; right: 20%; content: '☸'; animation-delay: 2s; }
+.sacred-symbol:nth-child(3) { bottom: 15%; left: 40%; content: '🕉'; animation-delay: 4s; }
+.sacred-symbol:nth-child(4) { bottom: 30%; right: 35%; content: '✡'; animation-delay: 6s; }
+
+@keyframes symbolGlow {
+  0%, 100% {
+    opacity: 0.1;
+    transform: scale(1) rotate(0deg);
+    text-shadow: 0 0 10px var(--indian-gold);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.2) rotate(180deg);
+    text-shadow: 0 0 20px var(--indian-gold), 0 0 30px var(--indian-yellow);
+  }
+}
+
+/* Ancient Card Styling */
+.ancient-card {
+  background: linear-gradient(145deg, 
+    rgba(26, 15, 15, 0.95) 0%, 
+    rgba(15, 8, 8, 0.98) 100%);
+  border: 2px solid var(--indian-gold);
+  box-shadow: 
+    0 0 20px rgba(212, 175, 55, 0.3),
+    inset 0 0 20px rgba(212, 175, 55, 0.1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transform-style: preserve-3d;
+}
+
+.ancient-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--indian-gold) 20%, 
+    var(--indian-yellow) 50%, 
+    var(--indian-gold) 80%, 
+    transparent 100%);
+}
+
+.ancient-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(205, 92, 92, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Ancient Button Styling */
+.ancient-button {
+  background: linear-gradient(145deg, 
+    var(--indian-gold) 0%, 
+    var(--indian-yellow) 50%, 
+    var(--indian-gold) 100%);
+  border: 2px solid var(--indian-brown);
+  color: var(--indian-dark);
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.ancient-button:hover {
+  background: linear-gradient(145deg, 
+    var(--indian-yellow) 0%, 
+    var(--indian-gold) 50%, 
+    var(--indian-yellow) 100%);
+  transform: translateY(-2px) translateZ(10px);
+  box-shadow: 
+    0 6px 12px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+.ancient-button:active {
+  transform: translateY(0) translateZ(0);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Ancient Input Styling */
+.ancient-input {
+  background: linear-gradient(145deg, 
+    rgba(26, 15, 15, 0.8) 0%, 
+    rgba(15, 8, 8, 0.9) 100%);
+  border: 2px solid var(--indian-bronze);
+  color: var(--indian-light);
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.3),
+    0 0 10px rgba(205, 127, 50, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.ancient-input:focus {
+  border-color: var(--indian-gold);
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(212, 175, 55, 0.4);
+  outline: none;
+  transform: translateZ(5px);
+}
+
+/* Ancient Text Styling */
+.ancient-title {
+  background: linear-gradient(45deg, 
+    var(--indian-gold) 0%, 
+    var(--indian-yellow) 25%, 
+    var(--indian-orange) 50%, 
+    var(--indian-yellow) 75%, 
+    var(--indian-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+  font-weight: bold;
+  transform-style: preserve-3d;
+}
+
+.ancient-subtitle {
+  color: var(--indian-silver);
+  text-shadow: 0 0 10px rgba(192, 192, 192, 0.3);
+}
+
+/* Ancient Border Patterns */
+.ancient-border {
+  border: 2px solid var(--indian-gold);
+  background: 
+    linear-gradient(45deg, transparent 30%, rgba(212, 175, 55, 0.1) 50%, transparent 70%);
+}
+
+/* Ancient Glow Effects */
+.ancient-glow {
+  box-shadow: 
+    0 0 20px rgba(212, 175, 55, 0.3),
+    0 0 40px rgba(212, 175, 55, 0.1);
+}
+
+.ancient-glow:hover {
+  box-shadow: 
+    0 0 30px rgba(212, 175, 55, 0.5),
+    0 0 60px rgba(212, 175, 55, 0.2);
+}
+
+/* Ancient Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--indian-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--indian-gold), var(--indian-bronze));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(var(--indian-yellow), var(--indian-gold));
+}
+
+/* Ancient Animation */
+@keyframes ancientPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+  }
+}
+
+.ancient-pulse {
+  animation: ancientPulse 3s ease-in-out infinite;
+}
+
+/* Ancient Loading Animation */
+@keyframes ancientSpin {
+  0% {
+    transform: rotate(0deg);
+    border-top-color: var(--indian-gold);
+  }
+  25% {
+    border-top-color: var(--indian-yellow);
+  }
+  50% {
+    border-top-color: var(--indian-orange);
+  }
+  75% {
+    border-top-color: var(--indian-red);
+  }
+  100% {
+    transform: rotate(360deg);
+    border-top-color: var(--indian-gold);
+  }
+}
+
+.ancient-spin {
+  border: 3px solid transparent;
+  border-top: 3px solid var(--indian-gold);
+  border-radius: 50%;
+  animation: ancientSpin 1s linear infinite;
+}
+
+/* Ancient Select Styling */
+.ancient-select {
+  background: linear-gradient(145deg, 
+    rgba(26, 15, 15, 0.9) 0%, 
+    rgba(15, 8, 8, 0.95) 100%);
+  border: 2px solid var(--indian-bronze);
+  color: var(--indian-light);
+}
+
+.ancient-select:focus {
+  border-color: var(--indian-gold);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Ancient Tooltip */
+.ancient-tooltip {
+  background: linear-gradient(145deg, 
+    rgba(26, 15, 15, 0.95) 0%, 
+    rgba(15, 8, 8, 0.98) 100%);
+  border: 1px solid var(--indian-gold);
+  color: var(--indian-light);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+/* Ancient Stats Panel */
+.ancient-stats {
+  background: linear-gradient(145deg, 
+    rgba(26, 15, 15, 0.8) 0%, 
+    rgba(15, 8, 8, 0.9) 100%);
+  border: 1px solid var(--indian-bronze);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.3),
+    0 0 10px rgba(205, 127, 50, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+/* Ancient Icon Styling */
+.ancient-icon {
+  color: var(--indian-gold);
+  filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
+}
+
+.ancient-icon:hover {
+  color: var(--indian-yellow);
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.7));
 }

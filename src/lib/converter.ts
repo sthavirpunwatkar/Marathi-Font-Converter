@@ -58,7 +58,7 @@ export function convertUnicodeToAps(text: string): string {
   while (position_of_i != -1) {
     let character_left_to_i = modified_substring.charAt(position_of_i - 1);
     modified_substring = modified_substring.replace(character_left_to_i + "ि", "ि" + character_left_to_i);
-    position_of_i = modified_substring.search(/ि/, position_of_i + 1);
+    position_of_i = modified_substring.indexOf("ि", position_of_i + 1);
   }
 
   // Matras
@@ -90,7 +90,7 @@ export function convertUnicodeToAps(text: string): string {
         modified_substring = modified_substring.replace("d" + char_after_ee + "d", char_after_ee + "d" + "d");
       }
     }
-    position_of_wrong_ee = modified_substring.search(/d/, position_of_wrong_ee + 1);
+    position_of_wrong_ee = modified_substring.indexOf("d", position_of_wrong_ee + 1);
   }
 
   position_of_wrong_ee = modified_substring.indexOf("d");
@@ -100,7 +100,7 @@ export function convertUnicodeToAps(text: string): string {
     if (char_after_after_ee == 'd') {
       modified_substring = modified_substring.replace("d" + char_after_ee + "d", char_after_ee + "d" + "d");
     }
-    position_of_wrong_ee = modified_substring.search(/d/, position_of_wrong_ee + 1);
+    position_of_wrong_ee = modified_substring.indexOf("d", position_of_wrong_ee + 1);
   }
 
   // Characters
