@@ -63,8 +63,8 @@ A comprehensive web-based tool for converting text between Unicode and various M
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/sthavirpunwatkar/Unicode-Font-Converter.git
-   cd Unicode-Font-Converter
+   git clone https://github.com/sthavirpunwatkar/Marathi-Font-Converter.git
+   cd Marathi-Font-Converter
    ```
 
 2. **Install dependencies**
