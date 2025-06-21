@@ -2,6 +2,30 @@
 
 A comprehensive web-based tool for converting text between Unicode and various Marathi fonts with a stunning 3D Indian mythology design.
 
+## 📸 Screenshots
+
+### 🎨 **Main Interface - 3D Indian Mythology Design**
+![Main Interface](screenshots/main-interface.png)
+*The beautiful 3D ancient Indian design with floating sacred geometry, lotus petals, and glowing symbols*
+
+### 🔤 **Font Conversion in Action**
+![Font Conversion](screenshots/font-conversion.png)
+*Converting text from Unicode to APS DV Prakash with real-time word count and validation*
+
+### 📱 **Responsive Design**
+![Mobile View](screenshots/mobile-view.png)
+*Perfect experience on mobile devices with touch-friendly controls*
+
+### ✨ **3D Animations & Effects**
+![3D Effects](screenshots/3d-effects.png)
+*Floating sacred symbols, animated lotus petals, and golden glow effects*
+
+### 📊 **Font Statistics Panel**
+![Font Stats](screenshots/font-stats.png)
+*Detailed mapping statistics for each supported font*
+
+---
+
 ## 🌟 Features
 
 ### ✨ **3D Indian Mythology Design**
